@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.com/libraries/Chart.js">
+</head>
+<body>
+    <div class="layout">
+        <div class="sidebar"></div>
+        <div class="main-section">
+            <div class="nav-bar">
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="#" class="menu-links active">dashboards</a></li>
+                        <li><a href="#" class="menu-links">pages</a>
+                        <li><a href="#" class="menu-links">store</a>
+                            <ul class="menu-level2-1">
+                                <li><a href="#" class="side-menu-links">Pricing</a></li>
+                                <li><a href="#" class="side-menu-links">Careers</a></li>
+                                <li><a href="#" class="side-menu-links">Blog</a></li>
+                                <li><a href="#" class="side-menu-links">FAQ</a></li>
+                                <li><a href="#" class="side-menu-links">our Team</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="menu-links">apps</a>
+                            <ul class="menu-level2-2">
+                                <li>
+                                    <a href="#" class="side-menu-links">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="side-menu-links">eCommerce</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="side-menu-links">School Portal</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="side-menu-links">CRM</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="side-menu-links">Support Center</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="menu-links">resources</a></li>
+                    </ul>
+                </div>
+                <div class="top-icons">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="#" class="side-menu-links">
+                                    <img src="./assets/images/icons/seach.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="side-menu-links">
+                                    <img src="./assets/images/icons/chart.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="side-menu-links">
+                                    <div class="notif"></div>
+                                    <img src="./assets/images/icons/chat.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="side-menu-links">
+                                    <img src="./assets/images/icons/idea.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-avatar">
+                        <img src="./assets/images/icons/avatar.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sub-nav">
+                <div class="sub-header-txt">
+                    <h3>eCommerce Dashboard</h3>
+                </div>
+                <div class="sub-header-links">
+                    <a href="#" class="sub-header-btn">manage sales</a>
+                    <a href="#" class="sub-header-btn-inverted">add product</a>
+                </div>
+            </div>
+            <div class="float-cards">
+                <div class="float-col">
+                    <div class="float-inner">
+                        <img src="./assets/images/icons/coins.png" alt="">
+                        <span>
+                            <p>total sales</p>
+                            <p>£19,633,245</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="float-col">
+                    
+                    <div class="float-inner">
+                        <img src="./assets/images/icons/carts.png" alt="">
+                        <span>
+                            <p>total orders</p>
+                            <p>3290</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="float-col">
+                    
+                    <div class="float-inner">
+                        <img src="./assets/images/icons/shopping-bags.png" alt="">
+                        <span>
+                            <p>total products</p>
+                            <p>322</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="main-section-body">
+                <div class="data-col">
+                    <label for="Data Label">Sales Statistics</label>
+                    <div class="data-col-flex">
+                        <div class="data-col-txt">
+                            <p><span class="color-bar1"></span>electronics</p>
+                            <p><span class="color-bar2"></span>Apparels</p>
+                            <p><span class="color-bar3"></span>jeweleries</p>
+                        </div>
+                        <div class="data-col-conatiner">
+                            <canvas id="myChart" width="120" height="80"></canvas></div>
+                        </div>
+                    </div>
+                <div class="data-col">
+                    <label for="Data Label">Market Target</label>
+                    <div class="data-col-header">
+                        <h1>1,836</h1>
+                        <span class="color-bar-inverted">2.25%</span>
+                    </div>
+                    <div class="data-col-block">
+                        <!-- <input type="range" name="" id="userRange"></div> -->
+                        <span class="range-val">65%</span>
+                        <progress id="userRange" value="65" max="100" min="0"></progress>
+                    </div>
+                <div class="data-col"></div>
+                <div class="data-col"></div>
+                <div class="data-col"></div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <table class="order-data">
+                <tbody>
+                    <tr>
+                        <th>S/No.</th>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>price</th>
+                    </tr>
+                </tbody>
+            </table></div>
+    </div>
+</body>
+<script src="./assets/js/jquery.js"></script>
+<script src="./assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart');
+const myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Total Sales'],
+        datasets: [{
+            data: [6, 5, 4],
+            backgroundColor: [
+                'rgb(46,121,230)',
+                'rgb(36,241,220)',
+                'rgb(26,205,110)'
+            ],
+            borderWidth: 1,
+            borderRadius: 5,
+            cutout: 40,
+            circumference: 320
+        }]
+    }
+});
+</script>
+</html>
