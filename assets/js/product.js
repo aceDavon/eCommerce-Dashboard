@@ -206,10 +206,31 @@ $(document).ready(function () {
     <a href="./product-form.html" class="sub-header-btn-inverted">add product</a>
 </div>
     `;
+
+    let ribbon = `
+        <div class="ribbon-left">
+            <input type="search" name="" id="" placeholder="search">
+        </div>
+        <div class="ribbon-right">
+            <div class="items-filter">
+                <input type="text" name="" id="" placeholder="filter">
+            </div>
+            <div class="items-sort">
+                <select name="" id="items-sort">
+                    <option value="">sort by</option>
+                    <option value="category">category</option>
+                    <option value="lowest-prices">Lowest prices</option>
+                    <option value="highest-prices">higest prices</option>
+                    <option value="category">category</option>
+                </select>
+            </div>
+        </div>
+    `;
     
     $('.sidebar').append(sideBar);
     $('.nav-bar').append(navBar);
     $('.sub-nav').append(subNav);
+    $('.table-ribbon').append(ribbon);
 
     $('.next-btn3').click(function () { 
         $('.menu-list-level2-3').toggleClass('show');
