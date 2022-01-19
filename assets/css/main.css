@@ -537,3 +537,131 @@ tr {
     text-transform: capitalize;
     border-radius: 8px;
 }
+
+.product-form-section {
+    display: flex;
+    gap: 15px;
+}
+
+.form-left {
+    width: 380px;
+    padding: 10px 15px;
+}
+
+.form-left-col {
+    width: 95%;
+    height: min-content;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 18px;
+    box-shadow: 2px 3px 2px rgba(153, 154, 168, 0.23);
+    background-color: #FFF;
+}
+
+.form-left-col label {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 2px 3px 2px rgba(153, 154, 168, 0.23);
+}
+
+.form-left-col img {
+    width: 120px;
+    height: 135px;
+    margin:  12px auto;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    box-shadow: 2px 3px 2px rgba(153, 154, 168, 0.65);
+}
+
+.form-left-col select {
+    padding: 5px 0;
+    width: 75%;
+    margin: 25px auto;
+    display: block;
+    border: 1px solid rgb(154, 155, 156);
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
+.form-recommended-txt {
+    font-size: small;
+    text-align: center;
+    color: rgb(154, 155, 156);
+}
+
+.form-add-btn {
+    margin: 25px auto;
+    width: 65%;
+}
+
+.form-add-btn a {
+    padding: 8px 0;
+    width: 100%;
+    background-color: #F1FAFF;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 8px;
+    appearance: button;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.product-form-input {
+    width: 75%;
+    margin: auto;
+}
+
+.form-right {
+    width: 650px;
+}
+
+.form-right-col {
+    padding: 25px 15px;
+    margin: 25px auto;
+    border: none;
+    width: 90%;
+    box-shadow: 2px 3px 2px rgba(153, 154, 168, 0.23);
+    background-color: #FFF;
+    border-radius: 8px;
+
+}
+
+.form-right-col span {
+    padding-left: 35px;
+    text-align: start;
+}
+
+.product-form-input input {
+    padding: 5px 0;
+    width: 100%;
+    margin: 5px auto;
+    border: 1px solid rgb(154, 155, 156);
+    border-radius: 8px;
+}
+
+.form-right-col label {
+    display: block;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 2px 3px 2px rgba(153, 154, 168, 0.23);
+}
+
+.form-right-col input{
+    width: 65%;
+    padding: 8px 0;
+    margin: 5px 15px;
+    border: 1px solid rgb(154, 155, 156);
+    border-radius: 8px;
+}
+
+.product-description {
+    width: 95%;
+    height: 250px;
+    margin: 5px 15px;
+    border: 1px solid rgb(154, 155, 156);
+    border-radius: 8px;
+}
