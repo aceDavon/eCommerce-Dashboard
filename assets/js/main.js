@@ -126,7 +126,21 @@ $(document).ready(function () {
                             </li>
                         </ul>
     `;
+    
+    let footer = `
+    <div class="copyright">
+        <p>&copy; 2022, all rights reserved</p>
+    </div>
+    <div class="footer-menu">
+        <ul>
+            <li><a href="#" class="footer-links">Help</a></li>
+            <li><a href="#" class="footer-links">support</a></li>
+            <li><a href="#" class="footer-links">purchase</a></li>
+        </ul>
+    </div>
+`;
 
+    $('.footer').append(footer);
     $('.sidebar').append(sideBar);
 
     $('.next-btn3').click(function () { 

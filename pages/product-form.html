@@ -112,11 +112,81 @@
                                 <label for="description">description</label>
                                 <textarea class="product-description"></textarea>
                             </div>
+                            <div class="form-right-col">
+                                <label for="product name">product name</label>
+                                <input type="file" name="" id="file" hidden>
+                                <label for="file" class="file"><img src="../assets/images/icons/file-upload.png" alt=""> upload image</label>
+                                <span class="form-recommended-txt">
+                                    <p>
+                                        Set the product media gallery.
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="form-right-col">
+                                <label for="product name">pricing</label>
+                                <label for="basic price">basic price</label>
+                                <input type="text" name="" id="">
+                                <span class="form-recommended-txt">
+                                    <p>
+                                        Set the product price.
+                                    </p>
+                                </span>
+                                <label for="product name">discount type</label>
+                                <div class="discount-box">
+                                    <div class="discount-box-col">
+                                        <label class="container">no discount
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="discount-box-col">  
+                                        <label class="container">percentage
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="discount-box-col">
+                                        <label class="container">fixed price
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-right-col-flex">
+                                    <div>
+                                        <label for="basic price">Tax Class</label>
+                                            <select name="" id="productStatus">
+                                                <option value="">select option</option>
+                                                <option value="tax_free">tax free</option>
+                                                <option value="taxable">taxable</option>
+                                                <option value="downloadable">downloadable</option>
+                                            </select>
+                                            <span class="form-recommended-txt">
+                                                <p>
+                                                    Set the product tax class.
+                                                </p>
+                                            </span>
+                                    </div>
+                                    <div>
+                                        <label for="basic price">VAT Amount (%)</label>
+                                        <input type="number" min="0" max="100" name="" id="">
+                                        <span class="form-recommended-txt">
+                                            <p>
+                                                Set the product VAT amount.
+                                            </p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="form-bottom-btn">
+                        <a href="" class="sub-header-btn">cancel</a>
+                        <a href="" class="sub-header-btn-inverted">Save changes</a>
                     </div>
                 </div>
             </div>
-
+            <div class="footer"></div>
         </div>
     </div>
 </body>
