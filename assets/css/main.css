@@ -363,7 +363,8 @@ html {
     background-color: rgb(26,205,110);
 }
 .order-data,
-.product-table {
+.product-table,
+.user-table {
     width: 100%;
     text-align: center;
     border-collapse: collapse;

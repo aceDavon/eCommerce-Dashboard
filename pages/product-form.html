@@ -68,7 +68,7 @@
                             </div>
                             <div class="form-left-col">
                                 <label for="thumbnail">category</label>
-                                <select name="" id="productStatus">
+                                <select name="" id="productCategory">
                                     <option value="published">computers</option>
                                     <option value="draft">electronics</option>
                                     <option value="scheduled">home/Kitchen</option>
@@ -82,9 +82,9 @@
                                 <div class="form-add-btn">
                                     <a href="#">+ add a category</a>
                                 </div>
-                                <label for="tag">tag</label>
+                                <label for="tag">Quantity</label>
                                 <div class="product-form-input">
-                                    <input type="text">
+                                    <input type="number" id="qty">
                                 </div>
                                 <span class="form-recommended-txt">
                                     <p>Add tags to a product.</p>
@@ -103,14 +103,14 @@
                         <div class="form-right">
                             <div class="form-right-col">
                                 <label for="product name">product name</label>
-                                <input type="text" name="" id="">
+                                <input type="text" name="" id="prdtName">
                                 <span class="form-recommended-txt">
                                     <p>
                                         A product name is required and recommended to be unique.
                                     </p>
                                 </span>
                                 <label for="description">description</label>
-                                <textarea class="product-description"></textarea>
+                                <textarea class="product-description" id="prdtDescrp"></textarea>
                             </div>
                             <div class="form-right-col">
                                 <label for="product name">product imgage</label>
@@ -125,7 +125,7 @@
                             <div class="form-right-col">
                                 <label for="product name">pricing</label>
                                 <label for="basic price">basic price</label>
-                                <input type="text" name="" id="">
+                                <input type="text" name="" id="price">
                                 <span class="form-recommended-txt">
                                     <p>
                                         Set the product price.
@@ -182,7 +182,8 @@
                     </div>
                     <div class="form-bottom-btn">
                         <a href="" class="sub-header-btn">cancel</a>
-                        <a href="" class="sub-header-btn-inverted">Save changes</a>
+                        <button type="button" class="sub-header-btn-inverted" 
+                        id="createPrdt">Save entry</button>
                     </div>
                 </div>
             </div>

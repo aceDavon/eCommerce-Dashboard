@@ -1,25 +1,26 @@
 $(document).ready(function () {
 
     $.ajax({
-        url: "https://fakestoreapi.com/products?limit=15",
+        url: "http://159.65.21.42:9000/products",
         method: "GET",
-        success: function (response) {
-            console.log(response);
-            $(response).each(function (i, data) { 
+        success: function (data) {
+            let i = 0;
+            while( i <= 29 ) {
                 let prodTable =`
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>${data.title}</td>
-                <td>${data.category}</td>
-                <td class="blue"><a href="#">15</a></td>
-                <td>£${data.price}</td>
-            </tr>`;
-
-            
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].category}</td>
+                        <td class="blue"><a href="#">${data[i].quantity}</a></td>
+                        <td>£${data[i].price}</td>
+                    </tr>
+                `;
             $('.order-data').append(prodTable);
-            });
+            i++;
+            }
         }
     });
+
     let sideBar = `
                     <div class="logo">
                     <h3 class="logo-txt">
@@ -72,7 +73,7 @@ $(document).ready(function () {
                                     <img src="./assets/images/icons/next.png" alt="" class="next-btn3">
                                 </span>
                                 <ul class="menu-list-level2-3">
-                                    <li><a href="#" class="side-menu-links">All Proucts</a></li>
+                                    <li><a href="./pages/products.html" class="side-menu-links">All Products</a></li>
                                     <li><a href="#" class="side-menu-links">Category</a></li>
                                     <li><a href="#" class="side-menu-links">Add Product</a></li>
                                     <li><a href="#" class="side-menu-links">Remove Product</a></li>

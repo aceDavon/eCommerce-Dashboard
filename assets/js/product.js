@@ -1,24 +1,81 @@
 $(document).ready(function () {
     
+    let productUrl = "http://159.65.21.42:9000/create/product"
+    let options = {
+        method: "POST",
+            crossDomain: true,
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin": "*"
+            },
+            data: {
+                category: $('#productCategory').val(),
+                quantity: $('#qty').val(),
+                name: $('#prdtName').val(),
+                price: $('#price').val(),
+                description: $('#prdtDescrp').val(),
+                image: $('#file').val()
+            },
+            dataType: "json"
+    }
+    
     $.ajax({
-        url: "https://fakestoreapi.com/products?limit=15",
+        url: "http://159.65.21.42:9000/products",
         method: "GET",
-        success: function (response) {
-            console.log(response);
-            $(response).each(function (i, data) { 
+        success: function (data) {
+            let i = 0;
+            while( i<= 29) {
                 let prodTable =`
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>${data.title}</td>
-                <td>${data.rating.rate}</td>
-                <td>15</td>
-                <td class="blue"><a href="#">${data.category}</a></td>
-                <td>£${data.price}</td>
-            </tr>`;
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>${data[i].name}</td>
+                        <td class="blue"><a href="#">${data[i].quantity}</a></td>
+                        <td>${data[i].category}</td>
+                        <td>£${data[i].price}</td>
+                    </tr>
+                `;
+                $('.product-table').append(prodTable);
+                i++;
+            }
+        }
+    });
+    
+    $.ajax({
+        url: "http://159.65.21.42:9000/users",
+        method: "GET",
+        success: function (data) {
+            let i = 0;
+            while(i <= data.length -1){
+                console.log(data[i])
+                let userTable = `
+                 <tr>
+                     <td><input type="checkbox" name="" id=""></td>
+                     <td>${data[i].name}</td>
+                     <td class="blue"><a href="#">${data[i].email}</a></td>
+                     <td>${data[i].password}</td>
+                     <td>${data[i].phone}</td>
+                 </tr>
+             `;
+             $('.user-table').append(userTable);
+             i++;
+            }
+        },
+        Error: function(err) {
+            console.log(err);
+        }
+    });
 
-            
-            $('.product-table').append(prodTable);
-            });
+    $('#createPrdt').click(function () {
+        let img = $('#file')[0].files[0];
+        if(!img){
+            alert('please make sure to choose a file for upload');
+        }else {
+           fetch(productUrl, options)
+            .then(data => data.json())
+                .then(data => {
+                    alert(data.name + " created successfully with id of " + data._id);
+                    console.log(data);
+                }).catch(err => console.log(err))
         }
     });
 
